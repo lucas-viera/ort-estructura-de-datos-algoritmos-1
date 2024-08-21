@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC33BEC627DE97C30095349B /* PruebasComienzo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BE9F27DE97C20095349B /* PruebasComienzo.cpp */; };
+		FC33BEC727DE97C30095349B /* PruebasArboles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEA127DE97C20095349B /* PruebasArboles.cpp */; };
+		FC33BEC827DE97C30095349B /* FuncAux_s.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEA227DE97C20095349B /* FuncAux_s.cpp */; };
+		FC33BEC927DE97C30095349B /* ManejadorSalidaPrueba.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEA327DE97C30095349B /* ManejadorSalidaPrueba.cpp */; };
+		FC33BECA27DE97C30095349B /* Pruebas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEA427DE97C30095349B /* Pruebas.cpp */; };
+		FC33BECB27DE97C30095349B /* EjerciciosComienzo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEA527DE97C30095349B /* EjerciciosComienzo.cpp */; settings = {COMPILER_FLAGS = "-Werror=vla"; }; };
+		FC33BECC27DE97C30095349B /* Defensa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEA627DE97C30095349B /* Defensa.cpp */; };
+		FC33BECD27DE97C30095349B /* EjerciciosArboles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEA927DE97C30095349B /* EjerciciosArboles.cpp */; settings = {COMPILER_FLAGS = "-Werror=vla"; }; };
+		FC33BECE27DE97C30095349B /* EjerciciosListas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEAA27DE97C30095349B /* EjerciciosListas.cpp */; settings = {COMPILER_FLAGS = "-Werror=vla"; }; };
+		FC33BECF27DE97C30095349B /* PruebasAuxListas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEAE27DE97C30095349B /* PruebasAuxListas.cpp */; };
+		FC33BED027DE97C30095349B /* PruebasAuxComienzo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEAF27DE97C30095349B /* PruebasAuxComienzo.cpp */; };
+		FC33BED127DE97C30095349B /* PruebasPropias.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEB127DE97C30095349B /* PruebasPropias.cpp */; };
+		FC33BED227DE97C30095349B /* Principal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEB227DE97C30095349B /* Principal.cpp */; };
+		FC33BED327DE97C30095349B /* PruebasAuxArboles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEB527DE97C30095349B /* PruebasAuxArboles.cpp */; };
+		FC33BED427DE97C30095349B /* FuncAux.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEB827DE97C30095349B /* FuncAux.cpp */; };
+		FC33BED527DE97C30095349B /* PruebasListas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEBC27DE97C30095349B /* PruebasListas.cpp */; };
+		FC33BED627DE97C30095349B /* PruebasAuxDefensa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEC127DE97C30095349B /* PruebasAuxDefensa.cpp */; };
+		FC33BED727DE97C30095349B /* PruebasDefensa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEC227DE97C30095349B /* PruebasDefensa.cpp */; };
+		FC33BED827DE97C30095349B /* ColaArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC33BEC427DE97C30095349B /* ColaArray.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC33BE9327DE97580095349B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FC33BE9527DE97580095349B /* Ejercicios1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Ejercicios1; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC33BE9F27DE97C20095349B /* PruebasComienzo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasComienzo.cpp; sourceTree = "<group>"; };
+		FC33BEA027DE97C20095349B /* PruebasArboles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasArboles.h; sourceTree = "<group>"; };
+		FC33BEA127DE97C20095349B /* PruebasArboles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasArboles.cpp; sourceTree = "<group>"; };
+		FC33BEA227DE97C20095349B /* FuncAux_s.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FuncAux_s.cpp; sourceTree = "<group>"; };
+		FC33BEA327DE97C30095349B /* ManejadorSalidaPrueba.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ManejadorSalidaPrueba.cpp; sourceTree = "<group>"; };
+		FC33BEA427DE97C30095349B /* Pruebas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pruebas.cpp; sourceTree = "<group>"; };
+		FC33BEA527DE97C30095349B /* EjerciciosComienzo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EjerciciosComienzo.cpp; sourceTree = "<group>"; };
+		FC33BEA627DE97C30095349B /* Defensa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Defensa.cpp; sourceTree = "<group>"; };
+		FC33BEA727DE97C30095349B /* FuncAux_s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuncAux_s.h; sourceTree = "<group>"; };
+		FC33BEA827DE97C30095349B /* PruebasPropias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasPropias.h; sourceTree = "<group>"; };
+		FC33BEA927DE97C30095349B /* EjerciciosArboles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EjerciciosArboles.cpp; sourceTree = "<group>"; };
+		FC33BEAA27DE97C30095349B /* EjerciciosListas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EjerciciosListas.cpp; sourceTree = "<group>"; };
+		FC33BEAB27DE97C30095349B /* ColaArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColaArray.h; sourceTree = "<group>"; };
+		FC33BEAC27DE97C30095349B /* Definiciones.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definiciones.h; sourceTree = "<group>"; };
+		FC33BEAD27DE97C30095349B /* PruebasAuxComienzo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasAuxComienzo.h; sourceTree = "<group>"; };
+		FC33BEAE27DE97C30095349B /* PruebasAuxListas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasAuxListas.cpp; sourceTree = "<group>"; };
+		FC33BEAF27DE97C30095349B /* PruebasAuxComienzo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasAuxComienzo.cpp; sourceTree = "<group>"; };
+		FC33BEB027DE97C30095349B /* Pruebas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pruebas.h; sourceTree = "<group>"; };
+		FC33BEB127DE97C30095349B /* PruebasPropias.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasPropias.cpp; sourceTree = "<group>"; };
+		FC33BEB227DE97C30095349B /* Principal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Principal.cpp; sourceTree = "<group>"; };
+		FC33BEB327DE97C30095349B /* EjerciciosComienzo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjerciciosComienzo.h; sourceTree = "<group>"; };
+		FC33BEB427DE97C30095349B /* ManejadorSalidaPrueba.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManejadorSalidaPrueba.h; sourceTree = "<group>"; };
+		FC33BEB527DE97C30095349B /* PruebasAuxArboles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasAuxArboles.cpp; sourceTree = "<group>"; };
+		FC33BEB627DE97C30095349B /* EjerciciosListas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjerciciosListas.h; sourceTree = "<group>"; };
+		FC33BEB727DE97C30095349B /* PruebasListas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasListas.h; sourceTree = "<group>"; };
+		FC33BEB827DE97C30095349B /* FuncAux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FuncAux.cpp; sourceTree = "<group>"; };
+		FC33BEB927DE97C30095349B /* PruebasAuxDefensa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasAuxDefensa.h; sourceTree = "<group>"; };
+		FC33BEBA27DE97C30095349B /* PruebasAuxListas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasAuxListas.h; sourceTree = "<group>"; };
+		FC33BEBB27DE97C30095349B /* version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version.txt; sourceTree = "<group>"; };
+		FC33BEBC27DE97C30095349B /* PruebasListas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasListas.cpp; sourceTree = "<group>"; };
+		FC33BEBD27DE97C30095349B /* PruebasAuxArboles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasAuxArboles.h; sourceTree = "<group>"; };
+		FC33BEBE27DE97C30095349B /* FuncAux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuncAux.h; sourceTree = "<group>"; };
+		FC33BEBF27DE97C30095349B /* Defensa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defensa.h; sourceTree = "<group>"; };
+		FC33BEC027DE97C30095349B /* PruebasComienzo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasComienzo.h; sourceTree = "<group>"; };
+		FC33BEC127DE97C30095349B /* PruebasAuxDefensa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasAuxDefensa.cpp; sourceTree = "<group>"; };
+		FC33BEC227DE97C30095349B /* PruebasDefensa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PruebasDefensa.cpp; sourceTree = "<group>"; };
+		FC33BEC327DE97C30095349B /* EjerciciosArboles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EjerciciosArboles.h; sourceTree = "<group>"; };
+		FC33BEC427DE97C30095349B /* ColaArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColaArray.cpp; sourceTree = "<group>"; };
+		FC33BEC527DE97C30095349B /* PruebasDefensa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruebasDefensa.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC33BE9227DE97580095349B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC33BE8C27DE97580095349B = {
+			isa = PBXGroup;
+			children = (
+				FC33BE9727DE97580095349B /* Ejercicios1 */,
+				FC33BE9627DE97580095349B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC33BE9627DE97580095349B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC33BE9527DE97580095349B /* Ejercicios1 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC33BE9727DE97580095349B /* Ejercicios1 */ = {
+			isa = PBXGroup;
+			children = (
+				FC33BEDB27DE9C6C0095349B /* Ejercicios */,
+				FC33BEDA27DE9C5C0095349B /* Framework */,
+				FC33BEDC27DE9C780095349B /* Pruebas */,
+			);
+			path = Ejercicios1;
+			sourceTree = "<group>";
+		};
+		FC33BEDA27DE9C5C0095349B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				FC33BEC427DE97C30095349B /* ColaArray.cpp */,
+				FC33BEAB27DE97C30095349B /* ColaArray.h */,
+				FC33BEAC27DE97C30095349B /* Definiciones.h */,
+				FC33BEA227DE97C20095349B /* FuncAux_s.cpp */,
+				FC33BEA727DE97C30095349B /* FuncAux_s.h */,
+				FC33BEB827DE97C30095349B /* FuncAux.cpp */,
+				FC33BEBE27DE97C30095349B /* FuncAux.h */,
+				FC33BEA327DE97C30095349B /* ManejadorSalidaPrueba.cpp */,
+				FC33BEB427DE97C30095349B /* ManejadorSalidaPrueba.h */,
+				FC33BEB227DE97C30095349B /* Principal.cpp */,
+				FC33BEA427DE97C30095349B /* Pruebas.cpp */,
+				FC33BEB027DE97C30095349B /* Pruebas.h */,
+				FC33BEA127DE97C20095349B /* PruebasArboles.cpp */,
+				FC33BEA027DE97C20095349B /* PruebasArboles.h */,
+				FC33BEB527DE97C30095349B /* PruebasAuxArboles.cpp */,
+				FC33BEBD27DE97C30095349B /* PruebasAuxArboles.h */,
+				FC33BEAF27DE97C30095349B /* PruebasAuxComienzo.cpp */,
+				FC33BEAD27DE97C30095349B /* PruebasAuxComienzo.h */,
+				FC33BEC127DE97C30095349B /* PruebasAuxDefensa.cpp */,
+				FC33BEB927DE97C30095349B /* PruebasAuxDefensa.h */,
+				FC33BEAE27DE97C30095349B /* PruebasAuxListas.cpp */,
+				FC33BEBA27DE97C30095349B /* PruebasAuxListas.h */,
+				FC33BEBB27DE97C30095349B /* version.txt */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		FC33BEDB27DE9C6C0095349B /* Ejercicios */ = {
+			isa = PBXGroup;
+			children = (
+				FC33BEBF27DE97C30095349B /* Defensa.h */,
+				FC33BEA627DE97C30095349B /* Defensa.cpp */,
+				FC33BEA927DE97C30095349B /* EjerciciosArboles.cpp */,
+				FC33BEC327DE97C30095349B /* EjerciciosArboles.h */,
+				FC33BEA527DE97C30095349B /* EjerciciosComienzo.cpp */,
+				FC33BEB327DE97C30095349B /* EjerciciosComienzo.h */,
+				FC33BEAA27DE97C30095349B /* EjerciciosListas.cpp */,
+				FC33BEB627DE97C30095349B /* EjerciciosListas.h */,
+			);
+			name = Ejercicios;
+			sourceTree = "<group>";
+		};
+		FC33BEDC27DE9C780095349B /* Pruebas */ = {
+			isa = PBXGroup;
+			children = (
+				FC33BE9F27DE97C20095349B /* PruebasComienzo.cpp */,
+				FC33BEC027DE97C30095349B /* PruebasComienzo.h */,
+				FC33BEC227DE97C30095349B /* PruebasDefensa.cpp */,
+				FC33BEC527DE97C30095349B /* PruebasDefensa.h */,
+				FC33BEBC27DE97C30095349B /* PruebasListas.cpp */,
+				FC33BEB727DE97C30095349B /* PruebasListas.h */,
+				FC33BEB127DE97C30095349B /* PruebasPropias.cpp */,
+				FC33BEA827DE97C30095349B /* PruebasPropias.h */,
+			);
+			name = Pruebas;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC33BE9427DE97580095349B /* Ejercicios1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC33BE9C27DE97580095349B /* Build configuration list for PBXNativeTarget "Ejercicios1" */;
+			buildPhases = (
+				FC33BE9127DE97580095349B /* Sources */,
+				FC33BE9227DE97580095349B /* Frameworks */,
+				FC33BE9327DE97580095349B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ejercicios1;
+			productName = Ejercicios1;
+			productReference = FC33BE9527DE97580095349B /* Ejercicios1 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC33BE8D27DE97580095349B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					FC33BE9427DE97580095349B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FC33BE9027DE97580095349B /* Build configuration list for PBXProject "Ejercicios1" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC33BE8C27DE97580095349B;
+			productRefGroup = FC33BE9627DE97580095349B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC33BE9427DE97580095349B /* Ejercicios1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC33BE9127DE97580095349B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC33BED227DE97C30095349B /* Principal.cpp in Sources */,
+				FC33BECA27DE97C30095349B /* Pruebas.cpp in Sources */,
+				FC33BED627DE97C30095349B /* PruebasAuxDefensa.cpp in Sources */,
+				FC33BED727DE97C30095349B /* PruebasDefensa.cpp in Sources */,
+				FC33BECF27DE97C30095349B /* PruebasAuxListas.cpp in Sources */,
+				FC33BECE27DE97C30095349B /* EjerciciosListas.cpp in Sources */,
+				FC33BEC627DE97C30095349B /* PruebasComienzo.cpp in Sources */,
+				FC33BED327DE97C30095349B /* PruebasAuxArboles.cpp in Sources */,
+				FC33BED427DE97C30095349B /* FuncAux.cpp in Sources */,
+				FC33BECC27DE97C30095349B /* Defensa.cpp in Sources */,
+				FC33BEC727DE97C30095349B /* PruebasArboles.cpp in Sources */,
+				FC33BED127DE97C30095349B /* PruebasPropias.cpp in Sources */,
+				FC33BECD27DE97C30095349B /* EjerciciosArboles.cpp in Sources */,
+				FC33BECB27DE97C30095349B /* EjerciciosComienzo.cpp in Sources */,
+				FC33BED527DE97C30095349B /* PruebasListas.cpp in Sources */,
+				FC33BEC927DE97C30095349B /* ManejadorSalidaPrueba.cpp in Sources */,
+				FC33BED827DE97C30095349B /* ColaArray.cpp in Sources */,
+				FC33BEC827DE97C30095349B /* FuncAux_s.cpp in Sources */,
+				FC33BED027DE97C30095349B /* PruebasAuxComienzo.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FC33BE9A27DE97580095349B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FC33BE9B27DE97580095349B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FC33BE9D27DE97580095349B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC33BE9E27DE97580095349B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC33BE9027DE97580095349B /* Build configuration list for PBXProject "Ejercicios1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC33BE9A27DE97580095349B /* Debug */,
+				FC33BE9B27DE97580095349B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC33BE9C27DE97580095349B /* Build configuration list for PBXNativeTarget "Ejercicios1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC33BE9D27DE97580095349B /* Debug */,
+				FC33BE9E27DE97580095349B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC33BE8D27DE97580095349B /* Project object */;
+}
