@@ -196,3 +196,4 @@ Resultado: (4,5,6,3,4,6,5)
 */
 void moverNodo(NodoLista *&lista, unsigned int inicial, unsigned int final);
 
+//intentar hacerlo recursivo

@@ -8,7 +8,7 @@ NodoLista* invertirParcial(NodoLista* l)
 
 void eliminarNesimoDesdeElFinal(NodoLista*& lista, int &n) 
 {
-	// IMPLEMENTAR SOLUCION
+	// IMPLEMENTAR SOLUCION (mas dificil)
 }
 
 NodoLista* listaOrdenadaInsertionSort(NodoLista* l) 

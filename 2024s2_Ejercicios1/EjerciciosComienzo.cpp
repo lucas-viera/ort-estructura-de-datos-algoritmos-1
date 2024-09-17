@@ -28,7 +28,7 @@ int* inicializarListaEnteros(int* lista, int largo) {
 }
 
 /*
-PRE: Recibe un vector de bool y la cantidad de elementos del mismo
+PRE: Recibe un array de bool y la cantidad de elementos del mismo
 POST: Devuelve el vector con sus posiciones incializadas en false
 */
 bool* inicializarListaBool(bool* lista, int largo) {
@@ -36,6 +36,31 @@ bool* inicializarListaBool(bool* lista, int largo) {
 		lista[i] = false;
 	}
 	return lista;
+}
+
+/*
+* PRE: Recibe un array de enteros, la cantidad de elementos y los indices a intercambiar
+* POST: La lista L tendrá invertidos los dos valores en los indices recibidos
+*/
+void Intercambiar(int* l, int n, int i, int j) {
+	int aux = l[i];
+	l[i] = l[j];
+	l[j] = aux;
+}
+
+/*
+* PRE:
+* POST:
+*/
+bool elementoPertenece(int* l, int largo, int elem) {
+	int i = 0;
+	while (i < largo) {
+		if (l[i] == elem) {
+			return true;
+		}
+		i++;
+	}
+	return false;
 }
 
 // FIN SECCIÓN FUNCIONES AUXILIARES
@@ -112,20 +137,65 @@ int maximoNumero(unsigned int n) {
 }
 
 void ordenarVecInt(int *vec, int largoVec) {
-	
-	
-
-	
+	//con insertion sort
+	for (int i = 1; i < largoVec; i++) {
+		int j = i;
+		while ((vec[j - 1] > vec[j]) && (j > 0)) {
+			Intercambiar(vec, largoVec, j, j - 1);
+			j--;
+		}
+	}
 }
 
 int* intercalarVector(int* v1, int* v2, int l1, int l2){
-	// IMPLEMENTAR SOLUCION
-	return NULL;
+	//similar merge
+
+	if (l1 == 0 && l2 == 0) {
+		return NULL;
+	}
+		
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	int* vec = new int [l1 + l2];
+
+	while ((i < l1) && (j < l2)) {
+		if (v1[i] <= v2[j]) {
+			vec[k] = v1[i];
+			i++;
+		}
+		else {
+			vec[k] = v2[j];
+			j++;
+		}
+		k++;
+	}
+	//Casos para terminar iteracion en cualquier caso
+	while (i < l1) {
+		vec[k] = v1[i];
+		i++;
+		k++;
+	}
+	while (j < l2) {
+		vec[k] = v2[j];
+		j++;
+		k++;
+	}
+	return vec;
 }
 
 bool subconjuntoVector(int* v1, int* v2, int l1, int l2)
 {
-	// IMPLEMENTAR SOLUCION
+	if (l1 == 0) {
+		return true;
+	}
+	int i = 0
+	
+	while ((i < l1) ) {
+
+		
+	}
+
 	return false;
 }
 
