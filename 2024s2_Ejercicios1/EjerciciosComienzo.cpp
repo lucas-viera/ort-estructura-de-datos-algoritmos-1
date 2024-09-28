@@ -2,7 +2,7 @@
 
 // INICIO SECCIÓN FUNCIONES AUXILIARES
 
-//TODO: agregar PRE y POST
+//TODO: agregar PRE y POS
 int maxComDivisor(int a, int b) {
 	int num1 = max(a, b);
 	int num2 = min(a, b);
@@ -18,7 +18,7 @@ int maxComDivisor(int a, int b) {
 
 /*
 PRE: Recibe un vector de enteros y la cantidad de elementos del mismo
-POST: Devuelve el vector con sus posiciones incializadas en 0
+POS: Devuelve el vector con sus posiciones incializadas en 0
 */
 int* inicializarListaEnteros(int* lista, int largo) {
 	for (int i = 0; i < largo; i++) {
@@ -29,7 +29,7 @@ int* inicializarListaEnteros(int* lista, int largo) {
 
 /*
 PRE: Recibe un array de bool y la cantidad de elementos del mismo
-POST: Devuelve el vector con sus posiciones incializadas en false
+POS: Devuelve el vector con sus posiciones incializadas en false
 */
 bool* inicializarListaBool(bool* lista, int largo) {
 	for (int i = 0; i < largo; i++) {
@@ -40,7 +40,7 @@ bool* inicializarListaBool(bool* lista, int largo) {
 
 /*
 * PRE: Recibe un array de enteros, la cantidad de elementos y los indices a intercambiar
-* POST: La lista L tendrá invertidos los dos valores en los indices recibidos
+* POS: La lista L tendrá invertidos los dos valores en los indices recibidos
 */
 void Intercambiar(int* l, int n, int i, int j) {
 	int aux = l[i];
@@ -50,7 +50,7 @@ void Intercambiar(int* l, int n, int i, int j) {
 
 /*
 * PRE:
-* POST:
+* POS:
 */
 bool elementoPertenece(int* l, int largo, int elem) {
 	int i = 0;
@@ -61,6 +61,95 @@ bool elementoPertenece(int* l, int largo, int elem) {
 		i++;
 	}
 	return false;
+}
+
+/*
+PRE:
+POS:
+*/
+bool caracterEsMinuscula(char c) {
+	return (c >= 'a' && c <= 'z');
+}
+
+/*
+PRE:
+POS:
+*/
+bool caracterEsMayuscula(char c) {
+	return (c >= 'A' && c <= 'Z');
+}
+
+/*
+PRE:
+POS:
+*/
+char convertirAMinuscula(char c) {
+	return c + ('a' - 'A');
+}
+
+/*
+PRE:
+POS:
+*/
+char convertirAMayuscula(char c) {
+	return c - ('a' - 'A');
+}
+
+/*
+PRE:
+POS:
+*/
+int largoString(char* str) {
+	int largo = 0;
+	while (str[largo] != '\0') {
+		largo++;
+	}
+	return largo;
+}
+
+/*
+PRE: recibe 2 char
+POS: devuelve -1 si el char a está antes que b en la tabla ASCII, +1 si está después o 0 si a==b
+*/
+int compararChar(char a, char b) {
+	if (a < b) return -1;
+	if (a > b) return 1;
+	return 0;	
+}
+
+/*
+PRE: recibe 2 string str1 str2
+POS: devuelve -1 si str1 está antes que str2, +1 si está después o 0 si str1==str2
+*/
+int compararString(char* str1, char* str2) {
+	int i = 0;
+	if (str1 == NULL || str2 == NULL) return 0;
+
+	while (str1[i] != '\0' && str2[i] != '\0') {
+		int result = compararChar(str1[i], str2[i]);
+		if (result != 0) {
+			return result;
+		}
+		i++;
+	}
+	// Escenarios para asegurar fin de la iteracion
+	if (str1[i] == '\0' && str2[i] != '\0') return -1;  // str1 más corto, va antes
+	if (str1[i] != '\0' && str2[i] == '\0') return 1;   // str1 más largo, va despues
+
+	return 0;	//escenario donde str1==str2
+}
+
+/*
+PRE: recibe 2 string de igual largo
+POS: copia caracter a caracter del string origen al destino
+*/
+void copiarString(char* origen, char* destino) {
+	int i = 0;
+	while (origen[i] != '\0') {
+		destino[i] = origen[i];
+		i++;
+	}
+	destino[i] = '\0';
 }
 
 // FIN SECCIÓN FUNCIONES AUXILIARES
@@ -184,26 +273,37 @@ int* intercalarVector(int* v1, int* v2, int l1, int l2){
 	return vec;
 }
 
-bool subconjuntoVector(int* v1, int* v2, int l1, int l2)
-{
+bool subconjuntoVector(int* v1, int* v2, int l1, int l2) {
 	if (l1 == 0) {
 		return true;
 	}
-	int i = 0
-	
-	while ((i < l1) ) {
-
-		
+	int i = 0;
+	while (i < l1 && elementoPertenece(v2, l2, v1[i])){ 
+		i++;
 	}
-
-	return false;
+	return (i == l1);
 }
 
-char* invertirCase(char* str)
-{
-	// IMPLEMENTAR SOLUCION
-	//hacer un new, reservar memoria y retornar el char*
-	return NULL;
+char* invertirCase(char* str) {
+	int largo = largoString(str);
+
+	char* invertido = new char[largo + 1];
+
+	int i = 0;
+	while (i < largo) {
+		if (caracterEsMinuscula(str[i])) {
+			invertido[i] = convertirAMayuscula(str[i]);
+		}
+		else if (caracterEsMayuscula(str[i])){
+			invertido[i] = convertirAMinuscula(str[i]);
+		}
+		else {
+			invertido[i] = str[i];
+		}
+		i++;
+	}
+	invertido[largo] = '\0';
+	return invertido;
 }
 
 int islas(char** mapa, int col, int fil){
@@ -217,10 +317,30 @@ unsigned int ocurrenciasSubstring(char **vecStr, int largoVecStr, char *substr)
     return 0;
 }
 
-char **ordenarVecStrings(char **vecStr, int largoVecStr)
-{
-	// IMPLEMENTAR SOLUCION
-    return NULL;
+char **ordenarVecStrings(char **vecStr, int largoVecStr) {
+
+	char** nuevo = new char*[largoVecStr];
+	int i = 0;
+
+	//Logica para copiar el vector original en el mismo orden que viene
+	while (i < largoVecStr) {
+		int largo = largoString(vecStr[i]);
+		nuevo[i] = new char[largo + 1];
+		copiarString(vecStr[i], nuevo[i]);
+		i++;
+	}
+
+	//Ordenamiento bubble-sort
+	for (int i = 0; i < largoVecStr - 1; i++) {
+		for (int j = 0; j < largoVecStr - 1 - i; j++) {
+			if (compararString(nuevo[j], nuevo[j + 1]) > 0) {	//condicion para intercambiar
+				char* temp = nuevo[j];
+				nuevo[j] = nuevo[j + 1];
+				nuevo[j + 1] = temp;
+			}
+		}
+	}
+	return nuevo;
 }
 
 char** splitStr(char* str, char separador, int &largoRet)
