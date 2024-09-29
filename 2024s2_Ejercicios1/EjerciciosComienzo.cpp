@@ -64,40 +64,40 @@ bool elementoPertenece(int* l, int largo, int elem) {
 }
 
 /*
-PRE:
-POS:
+PRE: recibe un char
+POS: identifica si es una letra entra la a y la z minusculas segun ASCII
 */
 bool caracterEsMinuscula(char c) {
 	return (c >= 'a' && c <= 'z');
 }
 
 /*
-PRE:
-POS:
+PRE: recibe un char
+POS: identifica si es una letra entre la A y la Z mayusculas segun ASCII
 */
 bool caracterEsMayuscula(char c) {
 	return (c >= 'A' && c <= 'Z');
 }
 
 /*
-PRE:
-POS:
+PRE: recibe un char
+POS: suma 32 para convertirlo a minuscula
 */
 char convertirAMinuscula(char c) {
 	return c + ('a' - 'A');
 }
 
 /*
-PRE:
-POS:
+PRE: recibe un char
+POS: resta 32 para convertirlo a Mayuscula
 */
 char convertirAMayuscula(char c) {
 	return c - ('a' - 'A');
 }
 
 /*
-PRE:
-POS:
+PRE: recibe un string
+POS: devuelve la cantidad de caracteres del string
 */
 int largoString(char* str) {
 	int largo = 0;
@@ -150,6 +150,23 @@ void copiarString(char* origen, char* destino) {
 		i++;
 	}
 	destino[i] = '\0';
+}
+
+
+/*
+PRE: recibe un char
+POS: devuelve true si es una T representando Tierra, de lo contrario False
+*/
+bool esTierra(char c) {
+	return c == 'T';
+}
+
+/*
+PRE: recibe un char
+POS: devuelve true si es una A representando Agua, de lo contrario False
+*/
+bool esAgua(char c) {
+	return c == 'A';
 }
 
 // FIN SECCIÓN FUNCIONES AUXILIARES
@@ -307,8 +324,21 @@ char* invertirCase(char* str) {
 }
 
 int islas(char** mapa, int col, int fil){
-	// IMPLEMENTAR SOLUCION
-    return 0;
+	/*
+	if (col == 0 || fil == 0 || mapa == NULL) {
+		return 0;
+	}
+	int cantIslas = 0;
+
+	for (int f = 0; f < fil; f++) {
+		for (int c = 0; c < col; c++) {
+			if (esTierra(mapa[c][f])) {
+				
+			}
+		}
+	}
+	*/
+    return NULL;
 }
 
 unsigned int ocurrenciasSubstring(char **vecStr, int largoVecStr, char *substr)
