@@ -18,6 +18,24 @@ void agregarAlInicio(NodoLista*& l, int x) {
 PRE:
 POS:
 */
+void agregarAlFinal(NodoLista*& l, int x) {
+	NodoLista* nuevoNodo = new NodoLista(x);
+	if (l == NULL) {
+		l = nuevoNodo;
+	}
+	else {
+		NodoLista* cursor = l;
+		while (cursor->sig != NULL) {	//busqueda del ultimo nodo
+			cursor = cursor->sig;
+		}
+		cursor->sig = nuevoNodo;
+	}
+}
+
+/*
+PRE:
+POS:
+*/
 int cantNodos(NodoLista* l) {
 	int cant = 0;
 	while (l->sig != NULL) {
@@ -225,10 +243,78 @@ NodoLista* listaOrdenadaInsertionSort(NodoLista* l) {
 	}
 }
 
-NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
-{
-	// IMPLEMENTAR SOLUCION
-	return NULL;
+NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2) {
+	if (l1 == NULL && l2 == NULL) {
+		return NULL;
+	}
+	if (l1 == NULL) {
+		return copiarLista(l2);
+	}
+	if (l2 == NULL) {
+		return copiarLista(l1);
+	}
+	
+	NodoLista* ordenada = NULL;					//lista a retornar
+	NodoLista* finOrd = NULL;					//cursor al final de lista ordenada
+	NodoLista* cursorL1 = l1;
+	NodoLista* cursorL2 = l2;
+	while (cursorL1 != NULL && cursorL2 != NULL) {
+		NodoLista* nuevoNodo = new NodoLista;
+		nuevoNodo->sig = NULL;
+		if (cursorL1->dato > cursorL2->dato) {			//insertar elem l2 primero
+			nuevoNodo->dato = cursorL2->dato;
+			cursorL2 = cursorL2->sig;
+		}
+		else {											//insertar elem l1 primero
+			nuevoNodo->dato = cursorL1->dato;
+			cursorL1 = cursorL1->sig;
+		}
+
+		if (ordenada == NULL) {
+			ordenada = nuevoNodo;
+			finOrd = nuevoNodo;
+		}
+		else {
+			finOrd->sig = nuevoNodo;
+			finOrd = nuevoNodo;
+		}
+	}
+
+	//caso l1 mas largo que l2, se inserta el remanente de l1
+	while (cursorL1 != NULL) {
+		NodoLista* nuevoNodo = new NodoLista;
+		nuevoNodo->dato = cursorL1->dato;
+		nuevoNodo->sig = NULL;
+
+		if (ordenada == NULL) {
+			ordenada = nuevoNodo;
+			finOrd = nuevoNodo;
+		}
+		else {
+			finOrd->sig = nuevoNodo;
+			finOrd = nuevoNodo;
+		}
+		cursorL1 = cursorL1->sig;
+	}
+
+	//caso l2 mas largo l1, se inserta el remanente de l2
+	while (cursorL2 != NULL) {
+		NodoLista* nuevoNodo = new NodoLista;
+		nuevoNodo->dato = cursorL2->dato;
+		nuevoNodo->sig = NULL;
+
+		if (ordenada == NULL) {
+			ordenada = nuevoNodo;
+			finOrd = nuevoNodo;
+		}
+		else {
+			finOrd->sig = nuevoNodo;
+			finOrd = nuevoNodo;
+		}
+		cursorL2 = cursorL2->sig;
+	}
+
+	return ordenada;
 }
 
 NodoLista* intercalarRec(NodoLista* l1, NodoLista* l2)
