@@ -317,10 +317,26 @@ NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2) {
 	return ordenada;
 }
 
-NodoLista* intercalarRec(NodoLista* l1, NodoLista* l2)
-{
-	// IMPLEMENTAR SOLUCION
-	return NULL;
+NodoLista* intercalarRec(NodoLista* l1, NodoLista* l2) {
+	if (l1 == NULL && l2 == NULL) {
+		return NULL;
+	}
+	if (l1 == NULL) {
+		return copiarLista(l2);
+	}
+	if (l2 == NULL) {
+		return copiarLista(l1);
+	}
+	NodoLista* nodoNuevo = new NodoLista;
+	if (l1->dato > l2->dato) {					//condicion para insertar elem de l2
+		nodoNuevo->dato = l2->dato;
+		nodoNuevo->sig = intercalarRec(l1, l2->sig);
+	}
+	else {										//condicion para insertar elem de l1
+		nodoNuevo->dato = l1->dato;
+		nodoNuevo->sig = intercalarRec(l1->sig, l2);
+	}
+	return nodoNuevo;
 }
 
 NodoLista* insComFin(NodoLista* l, int x)
@@ -329,10 +345,64 @@ NodoLista* insComFin(NodoLista* l, int x)
 	return NULL;
 }
 
-NodoLista* exor(NodoLista* l1, NodoLista* l2)
-{
-	// IMPLEMENTAR SOLUCION
-	return NULL;
+NodoLista* exor(NodoLista* l1, NodoLista* l2){
+	NodoLista* ordenada = NULL;					//lista a retornar
+	NodoLista* finOrd = NULL;					//cursor al final de lista ordenada
+	NodoLista* cursorL1 = l1;
+	NodoLista* cursorL2 = l2;
+	
+	while (cursorL1 != NULL || cursorL2 != NULL) {
+		int dato;
+		bool valido = false;
+
+		//caso insertar dato de L1
+		if (cursorL1 != NULL && (cursorL2 == NULL || cursorL1->dato < cursorL2->dato)) {
+			dato = cursorL1->dato;
+			valido = true;
+
+			//avanzar cursorL1 para evitar repetidos
+			int aux = cursorL1->dato;
+			while (cursorL1 != NULL && cursorL1->dato == aux) {
+				cursorL1 = cursorL1->sig;
+			}
+		}
+		//caso insertar dato de L2
+		else if (cursorL2 != NULL && (cursorL1 == NULL || cursorL2->dato < cursorL1->dato)) {
+			dato = cursorL2->dato;
+			valido = true;
+			
+			//avanzar cursorL2 para evitar repetidos
+			int aux = cursorL2->dato;
+			while (cursorL2 != NULL && cursorL2->dato == aux) {
+				cursorL2 = cursorL2->sig;
+			}
+		}
+		//el valor "vigente" es el mismo en ambas listas, se deben mover ambos cursores
+		else {	
+			int aux = cursorL1->dato;
+			while (cursorL1 != NULL && cursorL1->dato == aux) {
+				cursorL1 = cursorL1->sig;
+			}
+			while (cursorL2 != NULL && cursorL2->dato == aux) {
+				cursorL2 = cursorL2->sig;
+			}
+			valido = false;
+		}
+		if (valido) {
+			NodoLista* nuevoNodo = new NodoLista(dato);
+			nuevoNodo->sig = NULL;
+
+			if (ordenada == NULL) {		//caso lista vacia
+				ordenada = nuevoNodo;
+				finOrd = nuevoNodo;
+			}
+			else {						//caso lista no vacia
+				finOrd->sig = nuevoNodo;
+				finOrd = nuevoNodo;
+			}
+		}
+	}
+	return ordenada;
 }
 
 void eliminarDuplicadosListaOrdenadaDos(NodoLista*& l) 
