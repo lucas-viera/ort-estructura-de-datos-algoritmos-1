@@ -386,7 +386,7 @@ NodoLista* exor(NodoLista* l1, NodoLista* l2){
 			while (cursorL2 != NULL && cursorL2->dato == aux) {
 				cursorL2 = cursorL2->sig;
 			}
-			valido = false;
+			valido = false;	//estos valores no se deben insertar
 		}
 		if (valido) {
 			NodoLista* nuevoNodo = new NodoLista(dato);
@@ -405,9 +405,34 @@ NodoLista* exor(NodoLista* l1, NodoLista* l2){
 	return ordenada;
 }
 
-void eliminarDuplicadosListaOrdenadaDos(NodoLista*& l) 
-{
-	// IMPLEMENTAR SOLUCION
+void eliminarDuplicadosListaOrdenadaDos(NodoLista*& l) {
+	NodoLista* cursor = l;
+	NodoLista* anterior = NULL;
+
+	while (cursor != NULL) {
+		bool repetido = false;
+		while (cursor->sig != NULL && cursor->dato == cursor->sig->dato) { //busqueda de repetidos en parejas
+			repetido = true;
+			NodoLista* elim = cursor->sig;		//nodo a eliminar
+			cursor->sig = elim->sig;			//re conexion con nodo siguiente al que se elimina
+			delete elim;
+		}
+		if (repetido) {
+			NodoLista* auxElim = cursor;		//nodo copia unica a eliminar
+			cursor = cursor->sig;				//re conexion con nodo siguiente
+			if (anterior != NULL) {
+				anterior->sig = cursor;			//conexion nodo anterior al cursor
+			}
+			else {
+				l = cursor;		//caso de haber eliminado primer/os elementos (no hay anterior aun)
+			}
+			delete auxElim;		//tambien se elimina el que tuvo repetidos
+		}
+		else {
+			anterior = cursor;			//re conexion con nodo siguiente antes de movimiento de puntero cursor
+			cursor = cursor->sig;				
+		}
+	}
 }
 
 bool palindromo(NodoLista* l)
@@ -416,9 +441,47 @@ bool palindromo(NodoLista* l)
 	return false;
 }
 
-void eliminarSecuencia(NodoLista* &l, NodoLista* secuencia) 
-{
-	// IMPLEMENTAR SOLUCION
+void eliminarSecuencia(NodoLista* &l, NodoLista* secuencia) {
+	if (l == NULL || secuencia == NULL) {
+		return;
+	}
+
+	NodoLista* nodoPrevio = NULL;
+	NodoLista* nodoAct = l;
+
+	while (nodoAct != NULL) {
+		NodoLista* cursor = nodoAct;		//puntero para iterar sobre la lista
+		NodoLista* cursorSec = secuencia;	//puntero para iterar sobre la secuencia
+
+		//condiciones ok para avanzar y seguir comparando
+		while (cursor != NULL && cursorSec != NULL && cursor->dato == cursorSec->dato) {
+			cursor = cursor->sig;
+			cursorSec = cursorSec->sig;
+		}
+		if (cursorSec == NULL) {	//caso de secuencia completa
+			if (nodoPrevio == NULL) {
+				l = cursor;			//la lista debe ser actualizada a donde queda el cursor
+			}
+			else {
+				nodoPrevio->sig = cursor;
+			}
+			NodoLista* aux = nodoAct;
+			while (aux != cursor){			//se eliminan todos los nodos que coinciden con la sec
+				NodoLista* borrar = aux;
+				aux = aux->sig;
+				delete borrar;
+			}
+			return;
+
+		}
+		else {	//caso de no encontrar la secuencia
+			nodoPrevio = nodoAct;
+			nodoAct = nodoAct->sig;
+
+		}
+	}
+
+
 }
 
 void moverNodo(NodoLista* &lista, unsigned int inicial, unsigned int final)
